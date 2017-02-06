@@ -11,7 +11,7 @@ function moveright() {
     marginleft = marginleft + 10;
     img.style.marginleft = marginleft + 'px';
 }*/
-img.onclick = function(){
+img.onclick = function () {
     img.style.marfinLeft = '100px';
     //var interval = setInterval(moveright,300);
 };
