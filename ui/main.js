@@ -2,4 +2,4 @@ console.log('Loaded!');
 
 var element=document.getElementById('main-text');
 
-element.innerhtml = "new data";
+element.innerHTML = "new data";
