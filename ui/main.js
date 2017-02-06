@@ -1,23 +1,8 @@
-console.log('Loaded!');
+var button =document.getElementById("counter")
+var counter=0;
 
-var element=document.getElementById("main-text");
-
-element.innerHTML = "new data";
-
-var img = document.getElementById("img");
-
-var a = 0;
-function moveright () {
-    a = a + 1;
-    img.style.marginLeft = a + "px";
-}
-img.onclick = function () {
-    
-//img.style.marginLeft = "100px";
-    var interval = setInterval(moveright, 100);
+button.onclick= function() {
+    counter =counter + 1;
+    var span =document.getElementById('count');
+    span.innerHTML=counter.toString();
 };
-
-function myStopFunction() {
-    clearTimeout(interval);
-}
-
