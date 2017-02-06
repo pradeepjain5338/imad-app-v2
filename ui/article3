@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>
+            Article three | Pradeep kumar jain
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <a href='/'>Home</a>
+        </div>
+        <hr/>
+        <h1> Article three</h1>
+        
+        <div>
+            Feb 06th 2017
+        </div>
+        <div>
+            <p>
+                This is my third article. I have very little interest to write , i love to read rather
+            </p>
+           
+        </div>
+    </body>
+</html>
