@@ -4,7 +4,7 @@ var element=document.getElementById('main-text');
 
 element.innerHTML = "new data";
 
-var img=document.getElementById('img');
+var img = document.getElementById('img');
 
 /*var marginleft = 0;
 function moveright() {
