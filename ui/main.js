@@ -6,10 +6,10 @@ element.innerHTML = "new data";
 
 var img = document.getElementById('img');
 
-var marginLeft = 0;
+var a = 0;
 function moveright() {
-    marginLeft = marginLeft + 10;
-    img.style.marginleft = marginLeft + 'px';
+    a = a + 10;
+    img.style.marginleft = a + "px";
 }
 img.onclick = function () {
     
