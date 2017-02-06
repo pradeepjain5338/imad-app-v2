@@ -13,7 +13,7 @@ function moveright() {
 }*/
 img.onclick = function () {
     
-img.style.marginLeft = "100px";
+img.style.marginleft = "100px";
     //var interval = setInterval(moveright,300);
 };
 
