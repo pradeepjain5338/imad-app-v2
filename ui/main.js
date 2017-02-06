@@ -6,14 +6,14 @@ element.innerHTML = "new data";
 
 var img = document.getElementById("img");
 
-/*var a = 0;
+var a = 0;
 function moveright () {
     a = a + 1;
     img.style.marginleft = a + "px";
-}*/
+}
 img.onclick = function () {
     
-img.style.marginLeft = "100px";
-    //var interval = setInterval(moveright, 100);
+//img.style.marginLeft = "100px";
+    var interval = setInterval(moveright, 100);
 };
 
