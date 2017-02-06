@@ -1,10 +1,10 @@
 console.log('Loaded!');
 
-var element=document.getElementById('main-text');
+var element=document.getElementById("main-text");
 
 element.innerHTML = "new data";
 
-var img = document.getElementById('img');
+var img = document.getElementById("img");
 
 /*var a = 0;
 function moveright () {
