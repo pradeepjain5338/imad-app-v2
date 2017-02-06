@@ -7,7 +7,7 @@ element.innerHTML = "new data";
 var img = document.getElementById('img');
 
 var a = 0;
-function moveright() {
+function moveright () {
     a = a + 1;
     img.style.marginleft = a + "px";
 }
