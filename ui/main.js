@@ -6,14 +6,14 @@ element.innerHTML = "new data";
 
 var img = document.getElementById('img');
 
-var marginleft = 0;
+var marginLeft = 0;
 function moveright() {
-    marginleft = marginleft + 10;
-    img.style.marginleft = marginleft + 'px';
+    marginLeft = marginLeft + 10;
+    img.style.marginleft = marginLeft + 'px';
 }
 img.onclick = function () {
     
 //img.style.marginleft = "100px";
-    var interval = setinterval(moveright,300);
+    var interval = setinterval(moveright , 300);
 };
 
