@@ -12,7 +12,7 @@ function moveright() {
     img.style.marginleft = marginleft + 'px';
 }*/
 img.onclick = function(){
-    img.style.marfinleft = '100px';
+    img.style.marfinLeft = '100px';
     //var interval = setInterval(moveright,300);
 };
 
