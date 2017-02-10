@@ -20,7 +20,7 @@ button.onclick= function() {
         
     };
     
-  request.open('GET','http://http://pradeepjain5338.imad.hasura-app.io/counter',true)  ;
+  request.open('GET','http://pradeepjain5338.imad.hasura-app.io/counter',true)  ;
   request.send(null);
     
     
