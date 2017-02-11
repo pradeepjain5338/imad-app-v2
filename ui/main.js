@@ -22,6 +22,18 @@ button.onclick= function() {
   request.open('GET','http://pradeepjain5338.imad.hasura-app.io/counter',true)  ;
   request.send(null);
     
-    
-    
 };
+var nameinput= document.getElementById("name");
+var names = nameinput.value;
+var submit =document.getElementById("submit");
+submit.onclick =function() {
+    var name = ["name1","name2","name3"];
+    var list='';
+    for(var i=0;i<name.length;i++)
+    {
+        list+='<li>' + name[i] + '<li>' ;
+    }
+    var ul =document.getElementById("namelist");
+    ul.innerHTML = list;
+};
+    
