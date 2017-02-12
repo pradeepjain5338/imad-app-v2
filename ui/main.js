@@ -27,7 +27,16 @@ var nameinput= document.getElementById("name");
 var names = nameinput.value;
 var submit =document.getElementById("submit");
 submit.onclick =function() {
-    var name = ["name1","name2","name3"];
+    var request = new XMLHttpRequest() ;
+    
+    request.onreadystatechange = function() {
+        
+        if(request.readyState === XMLHttpRequest.DONE)
+{
+    if(request.status === 200)
+    {
+        var name = request.responseText;
+        name=JSON.parse(name);
     var list='';
     for(var i=0;i<name.length;i++)
     {
@@ -35,5 +44,15 @@ submit.onclick =function() {
     }
     var ul =document.getElementById("namelist");
     ul.innerHTML = list;
+    }
+}        
+        
+    };
+    
+  request.open('GET','http://pradeepjain5338.imad.hasura-app.io/submit-names?names=' + name ,true)  ;
+  request.send(null);
+    
+
+    
 };
     
