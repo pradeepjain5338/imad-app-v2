@@ -36,13 +36,13 @@ submit.onclick =function() {
     {
         var name = request.responseText;
         name=JSON.parse(name);
-    var list='';
+    var list1='';
     for(var i=0;i<name.length;i++)
     {
-        list += '<li>'+name[i]+'</li>' ;
+        list1 += '<li>'+name[i]+'</li>' ;
     }
     var ul =document.getElementById("namelist");
-    ul.innerHTML = list;
+    ul.innerHTML = list1;
     }
 }        
         
