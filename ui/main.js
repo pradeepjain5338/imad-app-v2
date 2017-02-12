@@ -47,8 +47,9 @@ submit.onclick =function() {
     }
 }        
         
-    };
-    
+    } ;
+    var names = nameinput.value;
+var submit =document.getElementById("submit");
   request.open('GET','http://pradeepjain5338.imad.hasura-app.io/submit-names?names=' + name ,true)  ;
   request.send(null);
     
