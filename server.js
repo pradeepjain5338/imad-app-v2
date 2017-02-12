@@ -72,7 +72,7 @@ return htmltemplate ;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-var counter =0
+var counter =0;
 app.get('/counter',function(req,res){
     counter=counter + 1;
     res.send(counter.toString());
@@ -91,6 +91,13 @@ app.get('/ui/main.js', function (req, res) {
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+});
+
+var name = [];
+app.get('/submit-names/:names',function(req,res){
+    var names=req.params.names;
+    name.push(names);
+    res.send(JSON.stringyfy(name));
 });
 
 
