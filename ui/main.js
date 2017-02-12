@@ -24,8 +24,7 @@ button.onclick= function() {
     
 };
 var nameinput= document.getElementById("name");
-var names = nameinput.value;
-var submit =document.getElementById("submit");
+
 submit.onclick =function() {
     var request = new XMLHttpRequest() ;
     
@@ -50,7 +49,7 @@ submit.onclick =function() {
     } ;
     var names = nameinput.value;
 var submit =document.getElementById("submit");
-  request.open('GET','http://pradeepjain5338.imad.hasura-app.io/submit-names?names=' + name ,true)  ;
+  request.open('GET','http://pradeepjain5338.imad.hasura-app.io/submit-names?names=' + names,true)  ;
   request.send(null);
     
 
