@@ -107,7 +107,7 @@ app.get('/test-db',function(req,res){
    }
 })});
 
-app.get('article/:articl1',function(req,res){
+app.get('article/:article1',function(req,res){
     
     pool.query("select * from article where title="+artilce1,function(err,result)
     {
