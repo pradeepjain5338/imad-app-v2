@@ -1,10 +1,10 @@
 body {
     font-family: sans-serif;
-    margin-top: 75px;
+    margin-top:auto;
 } 
 
 .center {
-    text-align: center;
+    text-align:center;
 }
 
 .text-big {
@@ -16,15 +16,15 @@ body {
 }
 
 .img-medium {
-    height: 200px;
+    height: none;
 }
 
 .container {
-       max-width: 100;
-        margin: auto;
-         color: #4d968f;
+       max-width:500;
+        margin:left;
+         color:brown#4d968f;
     font-family: sans-serlf;
-    /* padding-top: 64; 
-      padding-left: 150;
-      padding-right: 150;*/
+     padding-top: 100; 
+      padding-left:100 ;
+      padding-right:none;
          }
