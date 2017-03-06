@@ -107,9 +107,9 @@ app.get('/test-db',function(req,res){
    }
 })});
 
-app.get('article/:articlename',function(req,res){
+app.get('article/:articl1',function(req,res){
     
-    pool.query("select * from article where title='"+ req.params.articlename+"'",function(err,result)
+    pool.query("select * from article where title="+artilce1,function(err,result)
     {
        if(err){
    res.status(500).send(err.toString());
