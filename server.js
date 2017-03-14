@@ -137,7 +137,7 @@ function hash(input,salt){
 app.get('/hash/:input',function(req,res)
 {
     var hashedstring = hash(req.params.input,'some-rndm-string');
-    res.send(hashdstring);
+    res.send(hashedstring);
 }
 );
 
