@@ -134,7 +134,7 @@ function hash(input,salt){
 
     return ['pbkdf2','10000',salt,hashed.toString('hex')].join('$');
 }
-/*app.post('/create-user',function(req,res)
+app.post('/create-user',function(req,res)
 {
   var username =req.body.username;
   var password=req.body.password;
@@ -149,7 +149,7 @@ function hash(input,salt){
        res.send("user successfully created : " + username);
    }
 });
-});*/
+});
 
 app.post('/log',function(req,res)
 {
