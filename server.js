@@ -164,7 +164,7 @@ app.post('/login',function(req,res)
    }
    else if(result.rows.length=== 0)
    {
-      var dbstring=result.rows[0].password
+      var dbstring=result.rows[0].password;
    }
 });
 });
