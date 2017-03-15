@@ -132,7 +132,7 @@ app.get('/article/:articlename',function(req,res){
 function hash(input,salt){
      var hashed=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
 
-    return hashed.toString('hex');
+    return ['pbkdf2','10000',salt,hashed.toString('hex')].join('$');
 }
 app.post('/create-user',function(req,res)
 {
@@ -150,6 +150,26 @@ app.post('/create-user',function(req,res)
    }
 });
 });
+
+app.post('/login',function(req,res)
+{
+  var username =req.body.username;
+  var password=req.body.password;
+  var salt=crypto.randomBytes(128).toString('hex');
+  var dbstring=hash(password,salt);  
+  pool.query('SELECT * FROM "user" WHERE "username"=$1',[username],function(err,result)
+  {
+  if(err){
+   res.status(500).send(err.toString());
+   }
+   else if(result.rows.length=== 0)
+   {
+      var dbstring=result.rows[0].password
+   }
+});
+});
+
+
 
 
 app.get('/hash/:input',function(req,res)
