@@ -85,7 +85,7 @@ var password =document.getElementById('password').value;
 console.log(username);
 console.log(password);
   request.open('POST','http://pradeepjain5338.imad.hasura-app.io/login',true)  ;
-  request.setRequestHeader('content-type','application/json');
+  request.setRequestHeader('Content-Type','application/json');
   request.send(JSON.strigify({username : username,password : password}));
     
 
