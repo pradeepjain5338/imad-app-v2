@@ -206,6 +206,12 @@ app.get('/check-login',function(req,res)
 }
 );
 
+app.get('/logout',function(req,res)
+{
+    delete rew.seesion.auth;
+    res.send('you are logged out');
+}
+
 
 app.get('/hash/:input',function(req,res)
 {
