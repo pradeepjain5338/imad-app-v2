@@ -66,7 +66,6 @@ submit.onclick =function() {
 {
     if(request.status === 200)
     {
-     console.log('user logged in');
      alert('login success');
     
     }
