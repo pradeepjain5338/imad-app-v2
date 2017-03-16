@@ -12,12 +12,16 @@ var config={
     port:'5432',
     password : process.env.DB_PASSWORD
 };
-
+var session =require('express-session');
 
 
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+    secret : 'sonerandomvalue',
+    cookie : { maxAge : 1000*60*60*24*30 }
+}));
 
 var articles = {
     'article1': {
@@ -171,6 +175,11 @@ app.post('/login',function(req,res)
            var hashedpassword = hash(password,salt);
            if(hashedpassword === dbstring)
            {
+               //set session value
+               
+               req.session.auth ={userId : result.rows[0].id};
+               
+               
                res.send('login sucess');
                 }
              else{
@@ -184,7 +193,18 @@ app.post('/login',function(req,res)
 
 });
 
-
+app.get('/check-login',function(req,res)
+{
+    if(req.session&& req.session.auth && req.session.auth.userId)
+    {
+        res.send('you are logged into : ' + req.session.auth.userId.toString());
+    }
+    else
+    {
+        res.send('you are not logged in');
+    }
+}
+);
 
 
 app.get('/hash/:input',function(req,res)
