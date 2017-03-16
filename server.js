@@ -208,7 +208,7 @@ app.get('/check-login',function(req,res)
 
 app.get('/logout',function(req,res)
 {
-    delete rew.seesion.auth;
+    delete req.session.auth;
     res.send('you are logged out');
 });
 
