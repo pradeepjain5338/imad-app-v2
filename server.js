@@ -151,8 +151,7 @@ app.post('/create-user',function(req,res)
 });
 });
 
-app.post('/log',function(req,res)
-{
+app.post('/login',function(req,res){
   var username =req.body.username;
   var password=req.body.password;
  
@@ -162,7 +161,7 @@ app.post('/log',function(req,res)
    res.status(500).send(err.toString());
    }
    else {
-   if(result.rows.length=== 0)
+   if(result.rows.length === 0)
    {
      res.send(403).send('username/password is invalid');
    }else {
@@ -170,7 +169,7 @@ app.post('/log',function(req,res)
       var salt=dbstring.split('$')[2];
       var hashedpassword=hash(password,salt);
       
-      if(hashedpassword===dbstring){
+      if(hashedpassword === dbstring){
           req.send('user successfully logged');}
           else{
           req.send(403).send('username/password is invalid');
